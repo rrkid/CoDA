@@ -21,7 +21,7 @@ namespace CoDA.DAL
         public DbSet<ShipmentInfo> ShipmentInfos { get; set; }
         public DbSet<Shipment> Shipments { get; set; }
         public DbSet<MainOrder> MainOrders { get; set; }
-        public DbSet<PreparationsBase> PreparationsBases { get; set; }
+        public DbSet<Warehouse> Warehouses { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

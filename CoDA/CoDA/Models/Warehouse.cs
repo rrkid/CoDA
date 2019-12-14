@@ -5,7 +5,7 @@ using System.Web;
 
 namespace CoDA.Models
 {
-    public class PreparationsBase
+    public class Warehouse
     {
         public int Id { get; set; }
         public string Name { get; set; }

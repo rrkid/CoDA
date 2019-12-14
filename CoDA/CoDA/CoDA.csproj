@@ -170,10 +170,12 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\WarehouseController.cs" />
+    <Compile Include="DAL\CoDAInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-	<Compile Include="DAL\CoDAContext.cs" />
+    <Compile Include="DAL\CoDAContext.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Auction.cs" />
     <Compile Include="Models\AuctionInfo.cs" />
@@ -183,7 +185,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\OrderInfo.cs" />
     <Compile Include="Models\Preparation.cs" />
-    <Compile Include="Models\PreparationsBase.cs" />
+    <Compile Include="Models\Warehouse.cs" />
     <Compile Include="Models\Shipment.cs" />
     <Compile Include="Models\ShipmentInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -248,6 +250,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Warehouse\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
