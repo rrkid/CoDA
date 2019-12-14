@@ -173,9 +173,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+	<Compile Include="DAL\CoDAContext.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Auction.cs" />
+    <Compile Include="Models\AuctionInfo.cs" />
+    <Compile Include="Models\Distributor.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\MainOrder.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\OrderInfo.cs" />
+    <Compile Include="Models\Preparation.cs" />
+    <Compile Include="Models\PreparationsBase.cs" />
+    <Compile Include="Models\Shipment.cs" />
+    <Compile Include="Models\ShipmentInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
