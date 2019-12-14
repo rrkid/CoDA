@@ -20,7 +20,7 @@
 
 *Главная страница:*
 
-![1](/images/1.png)
+![MainPageView](/images/MainPage.png)
 
 *Вход в акаунт:*
 
