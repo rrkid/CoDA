@@ -49,15 +49,16 @@
 
 *Состав:*
 
-Мороков ИУ7-74 (@kaa16u386) - backend
+Мороков ИУ7-75 (@mml16u386) - backend
 
-Михеев ИУ7-74 (@mva16u385) - frontend
+Михеев ИУ7-71 (@mva16u385) - frontend
 
 *Стек:*
 
-Beckend: C# NetCore (ASP .NET MVC), MSSQL
+Beckend: C# ASP.NET (ASP .NET MVC), MSSQL
 
 Frontend: HTML+JS
+
 
 **Подход к CI/CD**
 
