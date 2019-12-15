@@ -201,6 +201,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Magnify2.gif" />
     <Content Include="Content\Styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -219,6 +220,11 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Search\EditOrderInfo.cshtml" />
+    <Content Include="Views\Search\EditPaymentDate.cshtml" />
+    <Content Include="Views\Search\EditShipmentInfo.cshtml" />
+    <Content Include="Views\Search\Search.cshtml" />
+    <Content Include="Views\Search\SearchInfo.cshtml" />
     <Content Include="Views\Warehouse\AddPreparation.cshtml" />
     <Content Include="Views\Warehouse\DeletePreparation.cshtml" />
     <Content Include="Views\Warehouse\EditPreparation.cshtml" />
