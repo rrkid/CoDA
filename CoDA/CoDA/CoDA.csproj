@@ -177,6 +177,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="DAL\CoDAContext.cs" />
+    <Compile Include="Helpers\AllInfo.cs" />
+    <Compile Include="Helpers\MoneyWorks.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Auction.cs" />
     <Compile Include="Models\AuctionInfo.cs" />
@@ -223,7 +225,9 @@
     <Content Include="Views\Warehouse\DeletePreparation.cshtml" />
     <Content Include="Views\Warehouse\EditPreparation.cshtml" />
     <Content Include="Views\Warehouse\LookWarehouse.cshtml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
