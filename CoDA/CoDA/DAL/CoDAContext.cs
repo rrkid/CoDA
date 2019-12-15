@@ -10,7 +10,11 @@ namespace CoDA.DAL
 {
     public class CoDAContext : DbContext
     {
-        public CoDAContext() : base("ProjectContext") //wtf
+        static CoDAContext()
+        {
+            Database.SetInitializer<CoDAContext>(new CoDAInitializer());
+        }
+        public CoDAContext() : base("CoDAContext")
         {
         }
         public DbSet<OrderInfo> OrderInfos { get; set; }
@@ -21,7 +25,7 @@ namespace CoDA.DAL
         public DbSet<ShipmentInfo> ShipmentInfos { get; set; }
         public DbSet<Shipment> Shipments { get; set; }
         public DbSet<MainOrder> MainOrders { get; set; }
-        public DbSet<PreparationsBase> PreparationsBases { get; set; }
+        public DbSet<Warehouse> Warehouses { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
