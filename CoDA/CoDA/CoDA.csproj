@@ -170,12 +170,15 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\WarehouseController.cs" />
     <Compile Include="DAL\CoDAInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="DAL\CoDAContext.cs" />
+    <Compile Include="Helpers\AllInfo.cs" />
+    <Compile Include="Helpers\MoneyWorks.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Auction.cs" />
     <Compile Include="Models\AuctionInfo.cs" />
@@ -200,6 +203,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Magnify2.gif" />
     <Content Include="Content\Styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -217,12 +221,21 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+	<Content Include="Scripts\jquery-1.10.2.min.js" />
+	<Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Search\EditOrderInfo.cshtml" />
+    <Content Include="Views\Search\EditPaymentDate.cshtml" />
+    <Content Include="Views\Search\EditShipmentInfo.cshtml" />
+    <Content Include="Views\Search\Search.cshtml" />
+    <Content Include="Views\Search\SearchInfo.cshtml" />
     <Content Include="Views\Warehouse\AddPreparation.cshtml" />
     <Content Include="Views\Warehouse\DeletePreparation.cshtml" />
     <Content Include="Views\Warehouse\EditPreparation.cshtml" />
     <Content Include="Views\Warehouse\LookWarehouse.cshtml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -257,7 +270,9 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Search\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

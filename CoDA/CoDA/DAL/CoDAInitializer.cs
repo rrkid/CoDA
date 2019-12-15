@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using CoDA.Models;
 using System.Data.Entity.Validation;
-
+using CoDA.Helpers;
 
 namespace CoDA.DAL
 {
@@ -28,6 +28,52 @@ namespace CoDA.DAL
             context.Warehouses.Add(new Warehouse { Id = 14, Name = "Иннонафактор 500", Amount = 5000, Price = 3498.6, PackageType = "Пакет", ProductionCode = "4390", Unit = "Шт.", Weight = 0.0005 });
             context.Warehouses.Add(new Warehouse { Id = 15, Name = "Иннонафактор 1000", Amount = 5000, Price = 6997.2, PackageType = "Пакет", ProductionCode = "1122", Unit = "Шт.", Weight = 0.001 });
 
+            context.OrderInfos.Add(new OrderInfo
+            {
+                Id = 1,
+                Date = "13.09.2019",
+                PreShipmentDate = "13.10.2019",
+                Status = "InProgress",
+                CustomerName = "MinpromTorg",
+                CustomerLocationArea = "Area of Moscow",
+                CustomerCity = "Podolsk"
+            });
+
+            double price = 26068;
+            int amount = 100;
+            context.Preparations.Add(new Preparation
+            {
+                Id = 1,
+                OrderInfoId = 1,
+                Name = "Коагил 1,2",
+                Amount = amount,
+                ExpirationDate = "25.09.2025",
+                Total = MoneyWorks.GetTotal(amount, price),
+                TotalVAT = MoneyWorks.GetTotalVAT(amount, price),
+                PaymentDate = "01.09.2019"
+            });
+
+            price = 6997.2;
+            amount = 200;
+            context.Preparations.Add(new Preparation
+            {
+                Id = 2,
+                OrderInfoId = 1,
+                Name = "Иннонафактор 1000",
+                Amount = amount,
+                ExpirationDate = "12.05.2023",
+                Total = MoneyWorks.GetTotal(amount, price),
+                TotalVAT = MoneyWorks.GetTotalVAT(amount, price),
+            });
+
+            context.Distributors.Add(new Distributor { Id = 1, Name = "SIA" });
+
+            context.AuctionInfos.Add(new AuctionInfo { Id = 1, AuctionNumber = "1", Date = "13.11.2019", Status = "InProgress" });
+
+            context.Auctions.Add(new Auction { Id = 1, AuctionInfoId = 1 });
+            context.ShipmentInfos.Add(new ShipmentInfo { Id = 1, Date = "13.12.2019", DistributorId = 1, Status = "InProgress" });
+            context.Shipments.Add(new Shipment { Id = 1, ShipmentInfoId = 1 });
+            context.MainOrders.Add(new MainOrder { Id = 1, OrderInfoId = 1, AuctionId = 1, ShipmentId = 1 });
             //base.Seed(context);
             try
             {
