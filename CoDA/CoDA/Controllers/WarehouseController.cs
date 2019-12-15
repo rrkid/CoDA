@@ -17,11 +17,11 @@ namespace CoDA.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddPreparation(Warehouse preparationsBase)
+        public ActionResult AddPreparation(Warehouse warehouse)
         {
-            db.Warehouses.Add(preparationsBase);
+            db.Warehouses.Add(warehouse);
             db.SaveChanges();
-            return RedirectToAction("LookPreparationBase");
+            return RedirectToAction("LookWarehouse");
         }
 
         [HttpGet]
@@ -44,7 +44,7 @@ namespace CoDA.Controllers
             }
             db.Warehouses.Remove(b);
             db.SaveChanges();
-            return RedirectToAction("LookPreparationBase");
+            return RedirectToAction("LookWarehouse");
         }
 
         [HttpGet]
@@ -52,23 +52,23 @@ namespace CoDA.Controllers
         {
             if (id == null)
                 return HttpNotFound();
-            Warehouse preparationsBase = db.Warehouses.Find(id);
-            if (preparationsBase != null)
+            Warehouse warehouse = db.Warehouses.Find(id);
+            if (warehouse != null)
             {
-                return View(preparationsBase);
+                return View(warehouse);
             }
             return HttpNotFound();
         }
 
         [HttpPost]
-        public ActionResult EditPreparation(Warehouse preparationsBase)
+        public ActionResult EditPreparation(Warehouse warehouse)
         {
-            db.Entry(preparationsBase).State = System.Data.Entity.EntityState.Modified;
+            db.Entry(warehouse).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
-            return RedirectToAction("LookPreparationBase");
+            return RedirectToAction("LookWarehouse");
         }
 
-        public ActionResult LookPreparationBase()
+        public ActionResult LookWarehouse()
         {
             IEnumerable<Warehouse> preparations = db.Warehouses;
             ViewBag.Warehouses = preparations;
