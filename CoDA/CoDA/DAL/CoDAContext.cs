@@ -10,7 +10,11 @@ namespace CoDA.DAL
 {
     public class CoDAContext : DbContext
     {
-        public CoDAContext() : base("ProjectContext") //wtf
+        static CoDAContext()
+        {
+            Database.SetInitializer<CoDAContext>(new CoDAInitializer());
+        }
+        public CoDAContext() : base("CoDAContext")
         {
         }
         public DbSet<OrderInfo> OrderInfos { get; set; }

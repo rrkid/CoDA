@@ -28,6 +28,7 @@ namespace CoDA.DAL
             context.Warehouses.Add(new Warehouse { Id = 14, Name = "Иннонафактор 500", Amount = 5000, Price = 3498.6, PackageType = "Пакет", ProductionCode = "4390", Unit = "Шт.", Weight = 0.0005 });
             context.Warehouses.Add(new Warehouse { Id = 15, Name = "Иннонафактор 1000", Amount = 5000, Price = 6997.2, PackageType = "Пакет", ProductionCode = "1122", Unit = "Шт.", Weight = 0.001 });
 
+            //base.Seed(context);
             try
             {
                 context.SaveChanges();
