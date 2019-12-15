@@ -74,12 +74,5 @@ namespace CoDA.Controllers
             ViewBag.Warehouses = preparations;
             return View();
         }
-
-        public ActionResult LookPreparation()
-        {
-            IEnumerable<Preparation> preparations = db.Preparations;
-            ViewBag.Preparations = preparations;
-            return View();
-        }
     }
 }
