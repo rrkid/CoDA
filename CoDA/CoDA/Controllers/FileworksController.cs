@@ -4,10 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.IO;
+using CoDA.DAL;
+using CoDA.Helpers;
+
 namespace CoDA.Controllers
 {
     public class FileworksController : Controller
     {
+        CoDAContext db = new CoDAContext(); 
         [HttpGet]
         public ActionResult AddTender()
         {
@@ -38,6 +42,23 @@ namespace CoDA.Controllers
                 ViewBag.Message = "Загрузка файла \"" + file.FileName.ToString() + "\" не произошла!";
                 return View();
             }
+        }
+
+        public ActionResult AddFile()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult UploadFiles(IEnumerable<HttpPostedFileBase> files)
+        {
+            foreach (var file in files)
+            {
+                FileHelper FH = new FileHelper(file, Server.MapPath("~/Files/"), db, ""); //+TenderFile
+                string filePath = Guid.NewGuid() + Path.GetExtension(file.FileName);
+                file.SaveAs(Path.Combine(Server.MapPath("~/Files/"), filePath));
+            }
+            return Json("file uploaded successfully");
         }
     }
 }

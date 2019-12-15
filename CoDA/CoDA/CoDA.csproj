@@ -179,6 +179,7 @@
     </Compile>
     <Compile Include="DAL\CoDAContext.cs" />
     <Compile Include="Helpers\AllInfo.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="Helpers\MoneyWorks.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Auction.cs" />
