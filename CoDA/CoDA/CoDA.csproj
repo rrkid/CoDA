@@ -225,6 +225,7 @@
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\jquery.filedrop.js" />
+    <Content Include="Views\Fileworks\AddFile.cshtml" />
     <Content Include="Views\Fileworks\AddTender.cshtml" />
     <Content Include="Views\Search\EditOrderInfo.cshtml" />
     <Content Include="Views\Search\EditPaymentDate.cshtml" />
