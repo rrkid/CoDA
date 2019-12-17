@@ -54,9 +54,9 @@ namespace CoDA.Controllers
         {
             foreach (var file in files)
             {
-                FileHelper FH = new FileHelper(file, Server.MapPath("~/Files/"), db, ""); //+TenderFile
-                string filePath = Guid.NewGuid() + Path.GetExtension(file.FileName);
-                file.SaveAs(Path.Combine(Server.MapPath("~/Files/"), filePath));
+                FileHelper FH = new FileHelper(file, Server.MapPath("~/Files/"), db); //+TenderFile
+                //string filePath = Guid.NewGuid() + Path.GetExtension(file.FileName);
+                //file.SaveAs(Path.Combine(Server.MapPath("~/Files/"), filePath));
             }
             return Json("file uploaded successfully");
         }
