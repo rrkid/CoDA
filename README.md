@@ -43,6 +43,16 @@
 ![6](images/6.png)
 
 **Архитектура приложения**
+*Диаграммы взаимодействия Backend-Frontend*
+![1_Diagram](images/1_Diagram.png)
+
+![2_Diagram](images/2_Diagram.png)
+
+![3_Diagram](images/3_Diagram.png)
+
+![4_Diagram](images/4_Diagram.png)
+
+![5_Diagram](images/5_Diagram.png)
 
 
 **Технические детали реализации**
