@@ -63,6 +63,7 @@ namespace CoDA.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult EditOrderInfo(int? id)
         {
             if (id == null)
@@ -84,6 +85,7 @@ namespace CoDA.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult EditShipmentInfo(int? id)
         {
             if (id == null)
@@ -107,6 +109,7 @@ namespace CoDA.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult EditPaymentDate(int? id)
         {
             if (id == null)

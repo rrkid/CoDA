@@ -13,6 +13,7 @@ namespace CoDA.Controllers
     {
         CoDAContext db = new CoDAContext(); 
         [HttpGet]
+        [Authorize]
         public ActionResult AddTender()
         {
             return View();
@@ -43,7 +44,7 @@ namespace CoDA.Controllers
                 return View();
             }
         }
-
+        [Authorize]
         public ActionResult AddFile()
         {
             return View();

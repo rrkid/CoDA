@@ -11,6 +11,7 @@ namespace CoDA.Controllers
     {
         CoDAContext db = new CoDAContext();
         [HttpGet]
+        [Authorize]
         public ActionResult AddPreparation()
         {
             return View();
@@ -25,6 +26,7 @@ namespace CoDA.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult DeletePreparation(int id)
         {
             Warehouse b = db.Warehouses.Find(id);
@@ -48,6 +50,7 @@ namespace CoDA.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult EditPreparation(int? id)
         {
             if (id == null)

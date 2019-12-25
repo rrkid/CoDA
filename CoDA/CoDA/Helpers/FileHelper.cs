@@ -27,7 +27,6 @@ namespace CoDA.Helpers
             this.pathTender = path + this.pathTender;
             File.WriteAllBytes(this.path, byteArr);
             ExcelWorks(db);
-            File.Delete(this.path);
         }
 
         private void ExcelWorks(CoDAContext db)
@@ -36,7 +35,7 @@ namespace CoDA.Helpers
             WorkbookPart workbookPart = doc.WorkbookPart;
             WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
             SheetData sheetData = worksheetPart.Worksheet.Elements<SheetData>().First();
-            int maxrows = sheetData.Elements<Row>().Count();
+            int maxrows = sheetData.Elements<Row>().Count()-1;
             int maxcols = sheetData.Elements<Row>().First().Elements<Cell>().Count();
             if (maxcols != 11) //неправильное кол-во колонок в файле
             {
