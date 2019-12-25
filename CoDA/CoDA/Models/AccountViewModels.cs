@@ -49,8 +49,7 @@ namespace CoDA.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Адрес электронной почты")]
-        [EmailAddress]
+        [Display(Name = "Логин")]
         public string Email { get; set; }
 
         [Required]

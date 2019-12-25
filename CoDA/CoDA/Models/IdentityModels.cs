@@ -20,6 +20,10 @@ namespace CoDA.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        /*static ApplicationDbContext()
+        {
+            Database.SetInitializer<ApplicationDbContext>(new AppDbInitializer());
+        }*/
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
